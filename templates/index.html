@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Download and Upload to Google Drive</title>
 </head>
 <body>
-    <h4>{{label}}</h4>
+    <h1>Download and Upload to Google Drive</h1>
+    <form method="post" action="/">
+        <label for="pdf_url">PDF Link:</label>
+        <input type="text" id="pdf_url" name="pdf_url" required>
+        <br>
+        <input type="submit" value="Download and Upload">
+    </form>
 </body>
 </html>

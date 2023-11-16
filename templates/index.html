@@ -2,16 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download PDF</title>
+    <title>PDF Downloader</title>
 </head>
 <body>
-    <h1>Download PDF</h1>
-    <form method="post" action="/">
-        <label for="pdf_url">PDF Link:</label>
+    <h1>PDF Downloader</h1>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <form action="{{ url_for('download_pdf') }}" method="post">
+        <label for="pdf_url">PDF URL:</label>
         <input type="text" id="pdf_url" name="pdf_url" required>
-        <br>
-        <input type="submit" value="Download PDF">
+        <button type="submit">Download PDF</button>
     </form>
 </body>
 </html>
